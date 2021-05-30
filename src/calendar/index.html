@@ -6,56 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        input {
-            border: none;
-            border-bottom: 1px solid black;
-
-        }
-    </style>
 </head>
 
 <body>
     <div id="calendar" style="height: 800px;"></div>
-    <script>
-        const Calendar = tui.Calendar;
-        const calendar = new Calendar('#calendar', {
-            defaultView: 'month',
-            taskView: true,
-            template: {
-                monthDayname: function (dayname) {
-                    return '<span class="calendar-week-dayname-name">' + dayname.label + '</span>';
-                }
-            }
-        });
-
-        const arr = [
-
-        ]
-
-        calendar.createSchedules([
-            {
-                id: '1',
-                calendarId: '1',
-                title: '영단어 외우기',
-                category: 'time',
-                dueDateClass: '',
-                start: new Date(),
-                end: new Date().setDate(new Date().getDate() + 1)
-            },
-            {
-                id: '2',
-                calendarId: '1',
-                title: 'second schedule',
-                category: 'time',
-                dueDateClass: '',
-                start: '2018-01-18T17:30:00+09:00',
-                end: '2018-01-19T17:31:00+09:00'
-            }
-        ]);
-
-        // calendar.changeView('month', true);
-    </script>
 </body>
 
 </html>

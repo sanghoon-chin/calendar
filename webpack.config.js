@@ -14,7 +14,8 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader'
+                use: 'ts-loader',
+                exclude: ['/node_modules']
             },
             {
                 test: /\.s[ac]ss$/i,
@@ -24,6 +25,13 @@ module.exports = {
                     'sass-loader'
                 ]
             },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader'
+                    , 'css-loader'
+                ]
+            }
         ]
     },
     plugins: [
@@ -42,6 +50,6 @@ module.exports = {
         port: 5500
     },
     resolve: {
-        extensions:['.tsx', '.ts', '.js']
+        extensions: ['.tsx', '.ts', '.js']
     }
 }
