@@ -1,0 +1,38 @@
+i{
+    font-size: 30px;
+}
+aside{
+    background-color: lightblue;
+    position: fixed;
+    font-size: 20px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 43px;
+    z-index: 1;
+}
+aside > div{
+    margin-top: 50px;
+}
+
+aside >div>div{
+    padding: 5px;
+}
+
+.width{
+    width: 200px;
+}
+
+#sidebar{
+    position: fixed;
+    top: 0px;
+    background-color: transparent;
+}
+
+
+.menu_selected{
+    background-color: #A9E2F3;
+}
