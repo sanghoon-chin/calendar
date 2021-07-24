@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">내 공부 캘린더</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./calendar.html">캘린더</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            과목별 계획표
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">국어</a></li>
+                            <li><a class="dropdown-item" href="#">영어</a></li>
+                            <li><a class="dropdown-item" href="#">수학</a></li>
+                            <!-- <li>
+                                <hr class="dropdown-divider">
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">마이페이지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="calendar-container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center" id="btn-container">
+                <button class="btn" data-type="prev">◀</button>
+                <button class="btn" data-type="next">▶</button>
+                <button class="btn btn-primary" data-type="today">Today</button>
+            </div>
+            <div id="current-date"></div>
+            <ul class="d-flex view-container justify-content-end">
+                <li class="p-3 active" data-view="month">월(month)</li>
+                <li class="p-3" data-view="week">주(week)</li>
+                <li class="p-3" data-view="day">일(day)</li>
+            </ul>
+        </div>
+        <div id="calendar"></div>
+    </div>
+
+    <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                추가 성공 (상황별 메세지 수정하기)
+            </div>
+            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+
+</body>
+
+</html>
